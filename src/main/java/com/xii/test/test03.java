@@ -39,9 +39,11 @@ public class test03 {
 				if(nodeName.equals("CAMERA")){
 					System.out.println("node attribute: " + ele.getAttribute("ID"));
 				}
+				
 				else if(nodeName.equals("OBJECT")){
 					// 이름이 student인 노드는 자식노드가 더 존재함
 					NodeList childeren2 = ele.getChildNodes();
+					
 					for(int a = 0; a < childeren2.getLength(); a++){
 						Node node2 = childeren2.item(a);
 						
@@ -49,13 +51,12 @@ public class test03 {
 							Element ele2 = (Element)node2;
 							String nodeName2 = ele2.getNodeName();
 							System.out.println("node name2: " + nodeName2);
-							System.out.println("node attribute2: " + ele2.getAttribute("bag"));
 							
 							NodeList childeren3 = ele2.getChildNodes(); // 자식 노드 목록 get
 							for(int j = 0; j < childeren3.getLength(); j++){
 								Node node3 = childeren3.item(j);
 								if(node3.getNodeType() == Node.ELEMENT_NODE){ // 해당 노드의 종류 판정(Element일 때)
-									Element ele3 = (Element)node;
+									Element ele3 = (Element)node3;
 									String nodeName3 = ele3.getNodeName();
 									System.out.println("node name3: " + nodeName3);
 								}
