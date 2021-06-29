@@ -14,7 +14,7 @@ public class XMLReader {
 
 	public static void main(String[] args) {
 
-		String BASE_DATA_PATH = "C:/test_in/";
+		String BASE_DATA_PATH = "C:/test_in/";	//가져올 디렉토리 복사할 디렉토리
 		
 		getXmlFile(BASE_DATA_PATH);
 		
@@ -23,7 +23,7 @@ public class XMLReader {
 	public static void getXmlFile(String BASE_DATA_PATH) {
 		
 		String xmlFileName = null;
-		String DATA_PATH = "C:/test_out/";
+		String DATA_PATH = "C:/test_out/";	//내보낼 디렉토리 붙여넣을 디렉토리 
 		
 		File files = new File(BASE_DATA_PATH);
 		File[] XmlFileList = files.listFiles();
